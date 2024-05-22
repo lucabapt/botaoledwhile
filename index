@@ -1,0 +1,27 @@
+//ESCREVER UM PROGRAMA QUE PERGUNTE A IDADE DO JOGADOR DE FUTEBOL. 
+// E CONTINUE PERGUNTANDO ATE ELA ACERTAR A IDADE CERTA.
+
+
+void setup ()
+{
+ Serial.begin(9600);
+}
+
+void loop () 
+{
+ bool idade = false;
+  
+ while(idade == false)
+ {  
+ Serial.println("\nQual a idade do Neymar\n");
+ while(!Serial.available());
+ int resposta = Serial.parseInt();
+ if (resposta == 32) 
+ {
+   Serial.println("\n\n Parabens \n");
+   idade = true; 
+   delay(1000);
+ }
+ }
+} 
+ 
